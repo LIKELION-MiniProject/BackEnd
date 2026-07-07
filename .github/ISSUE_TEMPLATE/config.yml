@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 기능명세서 (Notion)
+    url: https://www.notion.so/PLACEHOLDER-FEATURE-SPEC
+    about: PassPort 기능명세서를 확인하세요.
+  - name: API명세서 (Notion)
+    url: https://www.notion.so/PLACEHOLDER-API-SPEC
+    about: PassPort API 명세서(SSOT)를 확인하세요.
