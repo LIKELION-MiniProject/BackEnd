@@ -1,0 +1,52 @@
+name: 기능 제안 (Feature Request)
+description: 새로운 API 기능이나 백엔드 로직을 제안합니다.
+title: "[FEAT] "
+labels: ["type: 기능"]
+body:
+  - type: dropdown
+    id: epic
+    attributes:
+      label: EPIC
+      description: 관련된 기능 영역을 선택하세요.
+      options:
+        - AUTH (회원 인증)
+        - PROFILE (프로필)
+        - COURSE (수강 이력)
+        - CERT (졸업 인증)
+        - DIAG (졸업 진단)
+        - GPA (성적 트렌드)
+        - RECO (AI 과목 추천)
+        - REQ (졸업 요건 기준)
+        - DASH (홈 대시보드)
+        - 기타
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options:
+        - 필수
+        - 권장
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 기능 설명
+      description: 제안하는 기능을 구체적으로 설명해주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: api-spec
+    attributes:
+      label: API 명세서 반영 여부
+      description: Notion API 명세서에 이 기능이 반영되어 있는지 확인해주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 추가 참고사항
+    validations:
+      required: false
