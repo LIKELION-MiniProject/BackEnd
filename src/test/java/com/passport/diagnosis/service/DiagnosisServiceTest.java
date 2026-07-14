@@ -13,7 +13,8 @@ import com.passport.diagnosis.dto.DiagnosisResponse;
 import com.passport.profile.domain.Profile;
 import com.passport.profile.service.ProfileService;
 import com.passport.requirement.BigdataAiRequirement;
-import com.passport.requirement.service.RequirementService;
+import com.passport.requirement.domain.EffectiveRequirement;
+import com.passport.requirement.service.RequirementResolutionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,8 +25,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -38,7 +39,7 @@ class DiagnosisServiceTest {
     @Mock
     private CertificationRepository certificationRepository;
     @Mock
-    private RequirementService requirementService;
+    private RequirementResolutionService requirementResolutionService;
 
     @InjectMocks
     private DiagnosisService diagnosisService;
@@ -57,7 +58,7 @@ class DiagnosisServiceTest {
                 .build();
 
         when(profileService.findOwnedProfile(anyLong(), anyLong())).thenReturn(profile);
-        when(requirementService.getByDeptCode(anyString())).thenReturn(BigdataAiRequirement.REQUIREMENT);
+        when(requirementResolutionService.resolve(any())).thenReturn(EffectiveRequirement.fromHardcoded(BigdataAiRequirement.REQUIREMENT));
     }
 
     @Test

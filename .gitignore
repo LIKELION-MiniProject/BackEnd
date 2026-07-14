@@ -39,6 +39,11 @@ out/
 ### Claude Code (로컬 도구 상태 — 팀과 공유할 필요 없음) ###
 .claude/
 
+# H2 파일 모드 DB (로컬 데이터 — 커밋 금지)
+/data/
+*.mv.db
+*.trace.db
+
 # 시크릿 — 절대 커밋 금지
 application-local.yml
 .env

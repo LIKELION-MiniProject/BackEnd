@@ -1,0 +1,47 @@
+{
+  "studentId": "202312345",
+
+  "graduationAvailable": false,
+
+  "result": {
+
+    "semester": true,
+
+    "totalCredits": true,
+
+    "majorCredits": true,
+
+    "liberalCredits": true,
+
+    "gpa": true,
+
+    "graduationExam": true,
+
+    "graduationCertification": false,
+
+    "coreLiberal": {
+      "passed": true,
+      "completedAreaCount": 4,
+      "requiredAreaCount": 4,
+
+      "completedAreas": [
+        "언어와 문화",
+        "역사와 철학",
+        "사회와 경제",
+        "예술과 문화"
+      ],
+
+      "missingAreas": [
+        "과학과 자연",
+        "기초과학"
+      ]
+    }
+  },
+
+  "remainingRequirements": [
+    {
+      "type": "graduationCertification",
+      "message": "졸업인증 미이수"
+    }
+  ]
+}

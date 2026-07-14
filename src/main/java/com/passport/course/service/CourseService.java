@@ -35,6 +35,7 @@ public class CourseService {
                 .grade(request.grade())
                 .year(request.year())
                 .semester(request.semester())
+                .retake(request.retake())
                 .build();
 
         return CourseResponse.from(courseRepository.save(course));
@@ -50,7 +51,7 @@ public class CourseService {
     @Transactional
     public CourseResponse update(Long profileId, Long userId, Long courseId, CourseUpdateRequest request) {
         Course course = findOwnedCourse(profileId, userId, courseId);
-        course.update(request.name(), request.credit(), request.category(), request.grade(), request.year(), request.semester());
+        course.update(request.name(), request.credit(), request.category(), request.grade(), request.year(), request.semester(), request.retake());
         return CourseResponse.from(course);
     }
 

@@ -9,7 +9,8 @@ public record CourseResponse(
         Course.CourseCategory category,
         Course.Grade grade,
         int year,
-        int semester
+        int semester,
+        boolean retake
 ) {
 
     public static CourseResponse from(Course course) {
@@ -20,7 +21,8 @@ public record CourseResponse(
                 course.getCategory(),
                 course.getGrade(),
                 course.getYear(),
-                course.getSemester()
+                course.getSemester(),
+                course.isRetake()
         );
     }
 }

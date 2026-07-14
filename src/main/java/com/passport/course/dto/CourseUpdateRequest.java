@@ -8,6 +8,7 @@ public record CourseUpdateRequest(
         Course.CourseCategory category,
         Course.Grade grade,
         int year,
-        int semester
+        int semester,
+        boolean retake
 ) {
 }

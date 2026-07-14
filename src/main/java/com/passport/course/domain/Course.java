@@ -44,8 +44,11 @@ public class Course {
     @Column(nullable = false)
     private int semester;
 
+    @Column(nullable = false)
+    private boolean retake;
+
     @Builder
-    public Course(Profile profile, String name, int credit, CourseCategory category, Grade grade, int year, int semester) {
+    public Course(Profile profile, String name, int credit, CourseCategory category, Grade grade, int year, int semester, boolean retake) {
         this.profile = profile;
         this.name = name;
         this.credit = credit;
@@ -53,24 +56,38 @@ public class Course {
         this.grade = grade;
         this.year = year;
         this.semester = semester;
+        this.retake = retake;
     }
 
-    public void update(String name, int credit, CourseCategory category, Grade grade, int year, int semester) {
+    public void update(String name, int credit, CourseCategory category, Grade grade, int year, int semester, boolean retake) {
         this.name = name;
         this.credit = credit;
         this.category = category;
         this.grade = grade;
         this.year = year;
         this.semester = semester;
+        this.retake = retake;
     }
 
     // 이수 구분
     public enum CourseCategory {
-        MAJOR_REQUIRED,
-        MAJOR_ELECTIVE,
-        GE_REQUIRED,
-        GE_ELECTIVE,
-        GENERAL_ELECTIVE
+        MAJOR_BASIC("전공기초"),
+        MAJOR_REQUIRED("전공필수"),
+        MAJOR_ELECTIVE("전공선택"),
+        GE_REQUIRED("교양필수"),
+        GE_ELECTIVE("교양선택"),
+        GENERAL_ELECTIVE("자유선택");
+
+        private final String koreanLabel;
+
+        CourseCategory(String koreanLabel) {
+            this.koreanLabel = koreanLabel;
+        }
+
+        /** 화면 표기용 한글 라벨. JSON 직렬화(@JsonValue)는 그대로 상수명("MAJOR_BASIC" 등)을 쓴다 — 기존 계약 불변. */
+        public String getKoreanLabel() {
+            return koreanLabel;
+        }
     }
 
     // 성적 (GPA 환산값 포함). P/NP는 GPA 계산에서 분자·분모 모두 제외
@@ -120,7 +137,22 @@ public class Course {
                     return grade;
                 }
             }
+            String alias = aliasToLabel(label);
+            if (alias != null) {
+                return fromLabel(alias);
+            }
             throw new IllegalArgumentException("알 수 없는 성적 표기입니다: " + label);
+        }
+
+        /** "A0/B0/C0/D0" 표기(디자인·일부 학사 시스템 관행)를 정식 라벨("A/B/C/D")로 매핑 */
+        private static String aliasToLabel(String label) {
+            return switch (label) {
+                case "A0" -> "A";
+                case "B0" -> "B";
+                case "C0" -> "C";
+                case "D0" -> "D";
+                default -> null;
+            };
         }
     }
 }
