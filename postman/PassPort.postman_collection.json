@@ -1,0 +1,280 @@
+{
+  "info": {
+    "name": "PassPort API",
+    "description": "PassPort 전체 API 컬렉션 (AI 추천 연동 전 단계). 0.Auth 폴더의 '로그인'을 먼저 실행하면 accessToken이 컬렉션 변수에 자동 저장되어, 나머지 요청은 별도 설정 없이 Bearer 인증이 적용됩니다. 서버 실행 시 demo1@passport.ac.kr / demo2@passport.ac.kr (비밀번호 둘 다 Passport1!) 두 계정이 자동 시드됩니다.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{accessToken}}", "type": "string" }]
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080/api/v1" },
+    { "key": "accessToken", "value": "" },
+    { "key": "userId", "value": "1" },
+    { "key": "profileId", "value": "1" },
+    { "key": "courseId", "value": "1" },
+    { "key": "deptCode", "value": "BIGDATA_AI" }
+  ],
+  "item": [
+    {
+      "name": "0. Auth",
+      "item": [
+        {
+          "name": "회원가입 (POST /auth/signup)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newbie@passport.ac.kr\",\n  \"password\": \"Passport1!\",\n  \"nickname\": \"newbie\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/signup", "host": ["{{baseUrl}}"], "path": ["auth", "signup"] }
+          }
+        },
+        {
+          "name": "로그인 (POST /auth/login)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('로그인 성공', function () { pm.response.to.have.status(200); });",
+                  "var json = pm.response.json();",
+                  "if (json.success) {",
+                  "    pm.collectionVariables.set('accessToken', json.data.accessToken);",
+                  "    pm.collectionVariables.set('userId', json.data.userId);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"demo1@passport.ac.kr\",\n  \"password\": \"Passport1!\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/login", "host": ["{{baseUrl}}"], "path": ["auth", "login"] }
+          }
+        },
+        {
+          "name": "내 정보 조회 (GET /auth/me)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/auth/me", "host": ["{{baseUrl}}"], "path": ["auth", "me"] }
+          }
+        },
+        {
+          "name": "로그아웃 (POST /auth/logout)",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/auth/logout", "host": ["{{baseUrl}}"], "path": ["auth", "logout"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "1. Profile",
+      "item": [
+        {
+          "name": "프로필 생성 (POST /profiles)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deptCode\": \"{{deptCode}}\",\n  \"studentId\": \"2021123456\",\n  \"admissionYear\": 2021,\n  \"name\": \"Demo User\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/profiles", "host": ["{{baseUrl}}"], "path": ["profiles"] }
+          }
+        },
+        {
+          "name": "프로필 조회 (GET /profiles/{id})",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}"]
+            }
+          }
+        },
+        {
+          "name": "프로필 수정 (PATCH /profiles/{id})",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deptCode\": \"{{deptCode}}\",\n  \"studentId\": \"2021123456\",\n  \"admissionYear\": 2021,\n  \"name\": \"Demo User Updated\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Course",
+      "item": [
+        {
+          "name": "수강 이력 등록 (POST /profiles/{id}/courses)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Data Structures\",\n  \"credit\": 3,\n  \"category\": \"MAJOR_REQUIRED\",\n  \"grade\": \"A+\",\n  \"year\": 2023,\n  \"semester\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/courses",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "courses"]
+            }
+          }
+        },
+        {
+          "name": "수강 이력 조회 (GET /profiles/{id}/courses)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/courses",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "courses"]
+            }
+          }
+        },
+        {
+          "name": "수강 이력 수정 (PUT /profiles/{id}/courses/{cid})",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Data Structures\",\n  \"credit\": 3,\n  \"category\": \"MAJOR_REQUIRED\",\n  \"grade\": \"A\",\n  \"year\": 2023,\n  \"semester\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/courses/{{courseId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "courses", "{{courseId}}"]
+            }
+          }
+        },
+        {
+          "name": "수강 이력 삭제 (DELETE /profiles/{id}/courses/{cid})",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/courses/{{courseId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "courses", "{{courseId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Certification",
+      "item": [
+        {
+          "name": "졸업 인증 조회 (GET /profiles/{id}/certifications)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/certifications",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "certifications"]
+            }
+          }
+        },
+        {
+          "name": "졸업 인증 갱신 (PUT /profiles/{id}/certifications)",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"items\": [\n    { \"type\": \"LANGUAGE\", \"status\": \"PASS\" },\n    { \"type\": \"VOLUNTEER\", \"status\": \"NOT_SUBMITTED\" },\n    { \"type\": \"THESIS\", \"status\": \"FAIL\" }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/certifications",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "certifications"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Requirement",
+      "item": [
+        {
+          "name": "졸업 요건 조회 (GET /requirements/{deptCode})",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/requirements/{{deptCode}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["requirements", "{{deptCode}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Diagnosis",
+      "item": [
+        {
+          "name": "졸업 진단 조회 (GET /profiles/{id}/diagnosis)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/diagnosis",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "diagnosis"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. GPA Trend",
+      "item": [
+        {
+          "name": "성적 트렌드 조회 (GET /profiles/{id}/gpa-trend)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/gpa-trend",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "gpa-trend"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "7. Dashboard",
+      "item": [
+        {
+          "name": "홈 대시보드 조회 (GET /profiles/{id}/dashboard)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/profiles/{{profileId}}/dashboard",
+              "host": ["{{baseUrl}}"],
+              "path": ["profiles", "{{profileId}}", "dashboard"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

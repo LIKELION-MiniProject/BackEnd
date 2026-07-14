@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: passport
+  datasource:
+    # 영속(재시작해도 데이터 유지): 파일 모드 + AUTO_SERVER(동시 접속 허용). 파일은 ./data/passportdb.mv.db 에 생성.
+    # 휘발성(매 기동 초기화)로 되돌리려면 아래를 jdbc:h2:mem:passportdb 로 교체.
+    url: jdbc:h2:file:./data/passportdb;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
+
+# passport-ai(Python)가 사전 생성해 저장하는 추천 캐시 디렉터리. 시크릿이 아니므로 기본값 포함.
+# JVM 작업 디렉터리가 프로젝트 루트가 아니면 PASSPORT_AI_CACHE_DIR로 절대경로를 지정한다.
+passport-ai:
+  cache-dir: ${PASSPORT_AI_CACHE_DIR:passport-ai/cache}
+  # Spring→passport-ai 라이브 브릿지(bridge.py). 유저 데이터 변경 감지 시 AI 재생성에 사용.
+  python-command: ${PASSPORT_AI_PYTHON:python}
+  dir: ${PASSPORT_AI_DIR:passport-ai}

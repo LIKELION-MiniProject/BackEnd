@@ -1,0 +1,5 @@
+# google-genai: 1.39.0+ 에 클라이언트 조기종료 버그(RuntimeError: client has been closed)
+# → 검증된 1.38.0 으로 고정. 근거: python-genai issue #1489, #1763. (재현성 확보)
+google-genai==1.38.0
+pydantic>=2.0
+python-dotenv>=1.0

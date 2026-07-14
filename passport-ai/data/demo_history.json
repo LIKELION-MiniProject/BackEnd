@@ -1,0 +1,14 @@
+{
+  "_주석": "데모용 수강이력 (성적 포함). 실제로는 Spring DB Course.grade 에서 온다. 성향분석 시연을 위해 협업형=낮음/개별형=높음 패턴을 담음.",
+  "studentId": "202312345",
+  "history": [
+    { "courseCode": "401442", "courseName": "SF와 인문학",        "grade": "C+" },
+    { "courseCode": "400591", "courseName": "글로벌커뮤니케이션1", "grade": "B"  },
+    { "courseCode": "114578", "courseName": "영미문학의이해",      "grade": "B"  },
+    { "courseCode": "400677", "courseName": "한시의이해",          "grade": "A+" },
+    { "courseCode": "400676", "courseName": "동서고전문학",        "grade": "A"  },
+    { "courseCode": "400681", "courseName": "동양사",              "grade": "A+" },
+    { "courseCode": "400680", "courseName": "서양사",              "grade": "A"  },
+    { "courseCode": "113017", "courseName": "경제학개론",          "grade": "A"  }
+  ]
+}

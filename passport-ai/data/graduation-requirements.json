@@ -1,0 +1,67 @@
+{
+  "university": "을지대학교",
+  "year": 2026,
+
+  "commonRequirements": {
+    "minSemester": 8,
+    "minTotalCredits": 130,
+    "minGPA": 1.75,
+
+    "graduationCertification": true,
+
+    "requiredMajorCourses": true,
+    "requiredLiberalCourses": true,
+
+    "coreLiberalRequirement": {
+      "requiredAreas": 4,
+      "totalAreas": 6,
+      "minimumCoursePerArea": 1,
+
+      "areas": [
+        {
+          "code": "LANGUAGE_CULTURE",
+          "name": "언어와 문화",
+          "detailCategory": "1영역"
+        },
+        {
+          "code": "HISTORY_PHILOSOPHY",
+          "name": "역사와 철학",
+          "detailCategory": "2영역"
+        },
+        {
+          "code": "SOCIETY_ECONOMY",
+          "name": "사회와 경제",
+          "detailCategory": "3영역"
+        },
+        {
+          "code": "SCIENCE_NATURE",
+          "name": "과학과 자연",
+          "detailCategory": "4영역"
+        },
+        {
+          "code": "ARTS_CULTURE",
+          "name": "예술과 문화",
+          "detailCategory": "5영역"
+        },
+        {
+          "code": "BASIC_SCIENCE",
+          "name": "기초과학",
+          "detailCategory": "6영역"
+        }
+      ]
+    }
+  },
+
+  "majorRequirements": {
+    "singleMajor": {
+      "majorCredits": 70,
+      "liberalCredits": 30
+    },
+
+    "doubleMajor": {
+      "majorCredits": 42,
+      "secondMajorCredits": 42,
+      "liberalCredits": 30
+    }
+  }
+}

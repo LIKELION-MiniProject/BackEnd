@@ -1,0 +1,33 @@
+{
+  "studentId": "202312345",
+  "name": "홍길동",
+  "major": "AI빅데이터인공지능전공",
+  "majorType": "singleMajor",
+  "semester": 8,
+  "gpa": 3.62,
+  "credits": {
+    "total": 132,
+    "major": { "required": 24, "elective": 48, "total": 72 },
+    "secondMajor": { "required": 0, "elective": 0, "total": 0 },
+    "liberal": {
+      "required": 15,
+      "elective": 17,
+      "total": 32,
+      "coreLiberalCourses": {
+        "languageCulture": ["언어의이해"],
+        "historyPhilosophy": ["한국사"],
+        "societyEconomy": ["경제학개론"],
+        "scienceNature": [],
+        "artsCulture": ["음악의이해와표현"],
+        "basicScience": []
+      }
+    }
+  },
+  "completedCourses": [
+    { "courseCode": "400678" },
+    { "courseCode": "000003" },
+    { "courseCode": "113017" }
+  ],
+  "graduationExam": true,
+  "graduationCertification": false
+}

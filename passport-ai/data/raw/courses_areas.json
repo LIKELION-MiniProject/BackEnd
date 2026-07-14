@@ -1,0 +1,3642 @@
+[
+  {
+    "courseCode": "401354",
+    "courseName": "데이터분석기초",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_BASIC",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400968",
+    "courseName": "인공지능개론",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_BASIC",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401352",
+    "courseName": "프로그램기초",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401350",
+    "courseName": "통계기초",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401130",
+    "courseName": "인공지능수학",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401349",
+    "courseName": "인공지능프로그램",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401348",
+    "courseName": "SW/HW플랫폼설계",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401347",
+    "courseName": "통계실무",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400980",
+    "courseName": "클라우드컴퓨팅",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401346",
+    "courseName": "인공지능 플랫폼 설계",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401345",
+    "courseName": "데이터마이닝 및 응용실습",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "47",
+    "courseName": "자료구조",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "114002",
+    "courseName": "의료전문가시스템",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "340",
+    "courseName": "소프트웨어공학",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401344",
+    "courseName": "의사결정지원시스템",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "792",
+    "courseName": "졸업논문",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_REQUIRED",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401343",
+    "courseName": "객체지향프로그램",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401131",
+    "courseName": "미적분학",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400912",
+    "courseName": "데이터사이언스",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "219",
+    "courseName": "운영체제",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401342",
+    "courseName": "빅데이터처리",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "107033",
+    "courseName": "의료정보학",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400982",
+    "courseName": "딥러닝",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400990",
+    "courseName": "정밀의료",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401340",
+    "courseName": "멀티모달학습",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401339",
+    "courseName": "AI정보보안",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401338",
+    "courseName": "의료DB설계",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401337",
+    "courseName": "데이터 모델 및 시각화",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401336",
+    "courseName": "알고리즘 분석",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401446",
+    "courseName": "AI 시스템 활용",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400990",
+    "courseName": "BM프로젝트",
+    "category": "MAJOR",
+    "detailCategory": "MAJOR_ELECTIVE",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401012",
+    "courseName": "인성과대학생활Ⅰ",
+    "category": "LIBERAL",
+    "detailCategory": "신입생 적응교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401013",
+    "courseName": "인성과대학생활Ⅱ",
+    "category": "LIBERAL",
+    "detailCategory": "신입생 적응교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401014",
+    "courseName": "인성과미래설계Ⅰ",
+    "category": "LIBERAL",
+    "detailCategory": "재학생 진로교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 0,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401015",
+    "courseName": "인성과미래설계Ⅱ",
+    "category": "LIBERAL",
+    "detailCategory": "재학생 진로교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 0,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "113060",
+    "courseName": "사회봉사",
+    "category": "LIBERAL",
+    "detailCategory": "사회적 체험교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "263",
+    "courseName": "심폐소생술",
+    "category": "LIBERAL",
+    "detailCategory": "신체적 체험교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400846",
+    "courseName": "생명윤리",
+    "category": "LIBERAL",
+    "detailCategory": "생명윤리교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400589",
+    "courseName": "작문과화법",
+    "category": "LIBERAL",
+    "detailCategory": "의사소통교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400591",
+    "courseName": "글로벌커뮤니케이션1",
+    "category": "LIBERAL",
+    "detailCategory": "의사소통교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400592",
+    "courseName": "글로벌커뮤니케이션2",
+    "category": "LIBERAL",
+    "detailCategory": "의사소통교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401555",
+    "courseName": "인공지능과컴퓨팅사고(MD)",
+    "category": "LIBERAL",
+    "detailCategory": "컴퓨터적사고교육",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400678",
+    "courseName": "언어의이해",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400677",
+    "courseName": "한시의이해",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400928",
+    "courseName": "신화의이해",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400676",
+    "courseName": "동서고전문학",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114339",
+    "courseName": "중국문학의이해",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114578",
+    "courseName": "영미문학의이해",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114584",
+    "courseName": "작가와문학세계",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "401077",
+    "courseName": "디지털인문학의이해",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114528",
+    "courseName": "한국현대문학과사상(Tri-Learn)",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "401442",
+    "courseName": "SF와 인문학",
+    "category": "LIBERAL",
+    "detailCategory": "1영역 언어와 문학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "3",
+    "courseName": "한국사",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400681",
+    "courseName": "동양사",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400680",
+    "courseName": "서양사",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113600",
+    "courseName": "동양정신의산책",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114502",
+    "courseName": "서양철학의이해",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400682",
+    "courseName": "논어와 간디의 사상(PBL/혼합)",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400679",
+    "courseName": "논리와비판적사고",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114552",
+    "courseName": "걸어서역사속으로",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401018",
+    "courseName": "몸에대한철학적이해(Tri-Learn)",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401195",
+    "courseName": "디지털사회와포스트휴먼윤리(온라인)",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401445",
+    "courseName": "질병과세계사(신규)",
+    "category": "LIBERAL",
+    "detailCategory": "2영역 역사와 철학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "15",
+    "courseName": "심리학(Tri-Learn)",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400774",
+    "courseName": "정치학",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400471",
+    "courseName": "부모학",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400298",
+    "courseName": "법과생활",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400718",
+    "courseName": "도시의이해",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113296",
+    "courseName": "경영학개론",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113017",
+    "courseName": "경제학개론",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114523",
+    "courseName": "지역학개론",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "103103",
+    "courseName": "행정학원론",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "112113",
+    "courseName": "사회학개론",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400929",
+    "courseName": "젠더와미래사회",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400688",
+    "courseName": "인간행동의이해",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "401079",
+    "courseName": "데이터분석의기초(MD)",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401444",
+    "courseName": "세계시민교육과인권",
+    "category": "LIBERAL",
+    "detailCategory": "3영역 사회와 경제",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400465",
+    "courseName": "우주의이해",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114509",
+    "courseName": "식품의이해",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114530",
+    "courseName": "환경과인간",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400683",
+    "courseName": "과학과창의",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400466",
+    "courseName": "창의와융합",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113443",
+    "courseName": "자연과학의이해",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113132",
+    "courseName": "생명과학의이해(Edu-Us/온라인)",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114479",
+    "courseName": "과학기술과생활",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400858",
+    "courseName": "과학기술과나눔",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400717",
+    "courseName": "국토와자연의이해",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401078",
+    "courseName": "창의적사고와코딩(MD)",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401556",
+    "courseName": "생성형AI의이해와활용(신설)",
+    "category": "LIBERAL",
+    "detailCategory": "4영역 과학과 자연",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400685",
+    "courseName": "한국문화탐구",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400294",
+    "courseName": "다문화의이해",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400775",
+    "courseName": "대중문화의이해(Tri-Learn)",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114498",
+    "courseName": "디자인의이해",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400468",
+    "courseName": "동양미술의이해",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400469",
+    "courseName": "서양미술의이해",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400686",
+    "courseName": "세계의문화와유산",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114517",
+    "courseName": "음악의이해와표현",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400687",
+    "courseName": "공연예술과콘텐츠",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400849",
+    "courseName": "미래사회와상상력",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400473",
+    "courseName": "지역문화와축제(Tri-Learn)",
+    "category": "LIBERAL",
+    "detailCategory": "5영역 예술과 문화",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "113294",
+    "courseName": "물리학",
+    "category": "LIBERAL",
+    "detailCategory": "6영역 기초과학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "112108",
+    "courseName": "생물학",
+    "category": "LIBERAL",
+    "detailCategory": "6영역 기초과학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114589",
+    "courseName": "수학",
+    "category": "LIBERAL",
+    "detailCategory": "6영역 기초과학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113295",
+    "courseName": "화학",
+    "category": "LIBERAL",
+    "detailCategory": "6영역 기초과학",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114550",
+    "courseName": "EU인문과학콘서트",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400299",
+    "courseName": "성과심리학",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "113764",
+    "courseName": "현대미술의이해",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400292",
+    "courseName": "경영트렌드",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400474",
+    "courseName": "실용금융",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401016",
+    "courseName": "성공적인벤처창업입문(온라인)",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "401017",
+    "courseName": "성공적인벤처창업실무",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400709",
+    "courseName": "사회와마케팅",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114586",
+    "courseName": "현대사회와중독",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400297",
+    "courseName": "범죄와사회",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113924",
+    "courseName": "인터넷윤리",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114569",
+    "courseName": "복식과유행",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400852",
+    "courseName": "이미지인문학(Edu-Us/온라인)",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400475",
+    "courseName": "미디어와현대사회",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113376",
+    "courseName": "실버산업론",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401007",
+    "courseName": "의정부학",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401441",
+    "courseName": "K-콘텐츠새로읽기",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401441",
+    "courseName": "대인관계론(신설)",
+    "category": "LIBERAL",
+    "detailCategory": "H영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "114557",
+    "courseName": "기초러시아어Ⅰ",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114490",
+    "courseName": "기초영작문",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114491",
+    "courseName": "기초중국어회화Ⅰ",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113601",
+    "courseName": "생활일본어",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400301",
+    "courseName": "실용영어청취및말하기",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "114511",
+    "courseName": "실용영어청취및말하기",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "114521",
+    "courseName": "일본어청취및독해",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113278",
+    "courseName": "일본어회화Ⅰ",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114570",
+    "courseName": "비즈니스영어",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400689",
+    "courseName": "글로벌지리정보",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400690",
+    "courseName": "문화중국어",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400691",
+    "courseName": "글로벌영어",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400693",
+    "courseName": "글로벌문화영어",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114580",
+    "courseName": "온라인토익Ⅰ(온라인)",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114515",
+    "courseName": "온라인토익Ⅱ(온라인)",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "113301",
+    "courseName": "동아시아문화의이해",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114576",
+    "courseName": "아메리카지리와문화",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114582",
+    "courseName": "유럽지리와문화",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400694",
+    "courseName": "인류식문화",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400293",
+    "courseName": "기초스페인어",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114579",
+    "courseName": "영어청취및독해Ⅰ",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114513",
+    "courseName": "영어청취및독해Ⅱ",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401449",
+    "courseName": "글로벌영어2",
+    "category": "LIBERAL",
+    "detailCategory": "U영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400930",
+    "courseName": "과학기술문명론",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400778",
+    "courseName": "웰니스문화의이해",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400291",
+    "courseName": "UCC제작의이해",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "113554",
+    "courseName": "인체의이해",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400306",
+    "courseName": "창의적발상과표현",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114559",
+    "courseName": "기초소묘",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114499",
+    "courseName": "디자인커뮤니케이션",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400778",
+    "courseName": "광고와문화",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400711",
+    "courseName": "건강정보의이해",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114436",
+    "courseName": "컴퓨터활용능력(MD)",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400713",
+    "courseName": "프레젠테이션능력",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400714",
+    "courseName": "현대사회와건강관리",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400848",
+    "courseName": "미디어크리에이터",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400850",
+    "courseName": "헬스케어빅데이터",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401443",
+    "courseName": "글로벌시대 스포츠이벤트의이해",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "401588",
+    "courseName": "디지털리터러시와학습능력(신설)",
+    "category": "LIBERAL",
+    "detailCategory": "M영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": null
+  },
+  {
+    "courseCode": "400304",
+    "courseName": "인격개발과치유",
+    "category": "LIBERAL",
+    "detailCategory": "A영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114486",
+    "courseName": "EU인성세미나",
+    "category": "LIBERAL",
+    "detailCategory": "A영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "113718",
+    "courseName": "채플1",
+    "category": "LIBERAL",
+    "detailCategory": "A영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "113719",
+    "courseName": "채플2",
+    "category": "LIBERAL",
+    "detailCategory": "A영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 1,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "401197",
+    "courseName": "종교와문화",
+    "category": "LIBERAL",
+    "detailCategory": "A영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "401019",
+    "courseName": "의료법학",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400703",
+    "courseName": "이문화커뮤니케이션의이해(Edu-Us/온라인)",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400715",
+    "courseName": "진로탐색의이해",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400716",
+    "courseName": "자기개발과생애설계",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400777",
+    "courseName": "세상과소통하는기초한자",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 3,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400701",
+    "courseName": "현대인과체력",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "114573",
+    "courseName": "수영",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400470",
+    "courseName": "생활스포츠",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400303",
+    "courseName": "운동과스트레칭",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "보통"
+  },
+  {
+    "courseCode": "400305",
+    "courseName": "정신무도댁견",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "114289",
+    "courseName": "호신술",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400700",
+    "courseName": "도전스포츠",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "114527",
+    "courseName": "태권도",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "400702",
+    "courseName": "해양스포츠",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "114689",
+    "courseName": "동계스포츠Ⅰ",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  },
+  {
+    "courseCode": "114693",
+    "courseName": "동계스포츠Ⅱ",
+    "category": "LIBERAL",
+    "detailCategory": "N영역",
+    "liberalArea": null,
+    "coreArea": null,
+    "credit": 2,
+    "evaluation": {
+      "midterm": null,
+      "final": null,
+      "assignment": null,
+      "teamProject": null,
+      "presentation": null,
+      "attendance": null,
+      "quiz": null,
+      "practice": null
+    },
+    "gradingStyle": "너그러움"
+  }
+]
