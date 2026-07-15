@@ -86,8 +86,22 @@ public class UserRequirementService {
         if (request.certification() == null) {
             throw new BusinessException(ErrorCode.INVALID_INPUT_VALUE, "졸업 인증 항목(certification)은 필수입니다.");
         }
+        validateCertificationTargetsComplete(request.certification());
         if (request.graduationExam() == null) {
             throw new BusinessException(ErrorCode.INVALID_INPUT_VALUE, "졸업시험/논문 항목(graduationExam)은 필수입니다.");
+        }
+    }
+
+    /**
+     * 졸업 인증 5분야는 부분 입력 시 나머지가 null로 남아 CertMark.TARGET이 아닌 것으로 취급되어
+     * (DiagnosisService.buildGraduationCertification) 조용히 "충족"으로 오판정될 수 있다.
+     * 최종 제출(draft=false)에서는 5분야 전부를 명시적으로 채우도록 강제한다.
+     */
+    private void validateCertificationTargetsComplete(RequirementSaveRequest.CertificationTargets certification) {
+        if (certification.foreignLangCert() == null || certification.infoProcessing() == null
+                || certification.cpr() == null || certification.socialService() == null
+                || certification.foreignLangExtra() == null) {
+            throw new BusinessException(ErrorCode.INVALID_INPUT_VALUE, "졸업 인증 5분야(certification)는 모든 항목을 입력해야 합니다.");
         }
     }
 }

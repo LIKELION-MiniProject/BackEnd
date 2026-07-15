@@ -1,0 +1,6 @@
+# 팀 전체 공통 줄바꿈 정책 — 로컬 core.autocrlf 설정과 무관하게 저장소 차원에서 강제
+# 텍스트 파일은 저장소(커밋)에 항상 LF로 저장, 체크아웃 시에는 각자 OS 기본값으로 변환
+* text=auto
+
+# Windows 전용 스크립트는 CRLF 유지
+*.bat text eol=crlf

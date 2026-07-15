@@ -7,6 +7,7 @@ import com.passport.course.dto.CourseUpdateRequest;
 import com.passport.course.repository.CourseRepository;
 import com.passport.global.error.BusinessException;
 import com.passport.global.error.ErrorCode;
+import com.passport.persona.service.PersonaService;
 import com.passport.profile.domain.Profile;
 import com.passport.profile.service.ProfileService;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +23,7 @@ public class CourseService {
 
     private final CourseRepository courseRepository;
     private final ProfileService profileService;
+    private final PersonaService personaService;
 
     @Transactional
     public CourseResponse create(Long profileId, Long userId, CourseCreateRequest request) {
@@ -38,7 +40,9 @@ public class CourseService {
                 .retake(request.retake())
                 .build();
 
-        return CourseResponse.from(courseRepository.save(course));
+        CourseResponse response = CourseResponse.from(courseRepository.save(course));
+        personaService.refresh(profile);   // 성적 변경 → 성향(persona) 재분석·저장(원석 요청, 최선노력)
+        return response;
     }
 
     public List<CourseResponse> list(Long profileId, Long userId) {
@@ -52,12 +56,17 @@ public class CourseService {
     public CourseResponse update(Long profileId, Long userId, Long courseId, CourseUpdateRequest request) {
         Course course = findOwnedCourse(profileId, userId, courseId);
         course.update(request.name(), request.credit(), request.category(), request.grade(), request.year(), request.semester(), request.retake());
-        return CourseResponse.from(course);
+        CourseResponse response = CourseResponse.from(course);
+        personaService.refresh(course.getProfile());
+        return response;
     }
 
     @Transactional
     public void delete(Long profileId, Long userId, Long courseId) {
-        courseRepository.delete(findOwnedCourse(profileId, userId, courseId));
+        Course course = findOwnedCourse(profileId, userId, courseId);
+        Profile profile = course.getProfile();
+        courseRepository.delete(course);
+        personaService.refresh(profile);
     }
 
     private Course findOwnedCourse(Long profileId, Long userId, Long courseId) {

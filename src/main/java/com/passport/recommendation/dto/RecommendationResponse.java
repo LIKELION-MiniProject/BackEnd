@@ -12,6 +12,8 @@ public record RecommendationResponse(
         List<RecoItemDto> recommendations,
         String defaultDirectionId,
         String source,
-        String generatedAt
+        String generatedAt,
+        /** additive(계약 v2.1): 성향 persona 블록. 규칙 폴백·구버전 캐시에는 없을 수 있어 null 허용 — FE는 null이면 미표시. */
+        PersonaDto persona
 ) {
 }

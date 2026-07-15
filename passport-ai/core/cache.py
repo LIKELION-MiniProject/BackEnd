@@ -44,4 +44,4 @@ def read_cache(student_key: str) -> Result | None:
         default = "FAST_GRAD"
 
     return Result(directions=directions, defaultDirectionId=default,
-                  source="cache", generatedAt=d.get("generatedAt", ""))
+                  source="cache", generatedAt=d.get("generatedAt", ""), persona=d.get("persona"))

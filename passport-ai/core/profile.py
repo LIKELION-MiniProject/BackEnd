@@ -38,12 +38,91 @@ def _leaning(course: Course) -> Optional[str]:
     return None
 
 
+# persona 블록(type/label/description/strategies/summary) — 전부 고정 규칙 템플릿(긍정 프레이밍).
+# AI가 생성하지 않는다(원칙 1). 이름(OOO님)은 포함하지 않음 — FE가 프로필 이름과 조합해 표시.
+_PERSONA_TEMPLATES: dict[str, dict] = {
+    "indiv_strong": {
+        "type": "INDIV_STRONG",
+        "label": "안정 성장형",
+        "description": "발표와 팀플이 조금 부담되는 유형이에요. 대신 과제·실습형 과목에서 강점을 보이며, "
+                       "꾸준히 준비하면 안정적인 성과를 낼 수 있어요.",
+        "strategies": [
+            "과제·실습 중심의 학습을 꾸준히 유지하기",
+            "발표 연습으로 자신감 키우기 (짧은 발표부터 도전)",
+            "팀 프로젝트는 역할을 미리 정하고 소통 계획 세우기",
+        ],
+        "summary": [
+            "개별 평가(시험·과제) 과목에서 안정적인 성과를 내고 있어요.",
+            "팀플·발표 경험을 조금씩 늘리면 더 고른 성장을 기대할 수 있어요.",
+            "지금의 학습 루틴을 꾸준히 유지하는 것이 좋은 전략이에요.",
+        ],
+    },
+    "collab_strong": {
+        "type": "COLLAB_STRONG",
+        "label": "협업 활동형",
+        "description": "팀프로젝트·발표가 있는 과목에서 강점을 보이는 유형이에요. 활동형 수업에서 좋은 성과를 낼 수 있어요.",
+        "strategies": [
+            "팀 프로젝트·발표 기회가 있는 과목을 적극 활용하기",
+            "개별 시험·과제 과목은 미리 계획을 세워 대비하기",
+            "협업에서 얻은 강점을 포트폴리오로 정리해두기",
+        ],
+        "summary": [
+            "팀플·발표가 포함된 과목에서 좋은 성과를 내고 있어요.",
+            "개별 평가 과목도 꾸준히 준비하면 더 균형 잡힌 성장을 할 수 있어요.",
+            "협업 경험을 살릴 수 있는 과목을 이어서 선택해보세요.",
+        ],
+    },
+    "balanced": {
+        "type": "BALANCED",
+        "label": "균형 성장형",
+        "description": "다양한 평가 방식의 과목을 고르게 잘 수강해온 유형이에요. 어떤 방식의 수업에도 무리 없이 적응하고 있어요.",
+        "strategies": [
+            "관심 있는 분야를 넓혀가며 다양한 과목에 도전하기",
+            "강점이 뚜렷해지는 영역을 찾아 집중해보기",
+            "지금처럼 여러 평가 방식에 고르게 대응하는 습관 유지하기",
+        ],
+        "summary": [
+            "여러 평가 방식의 과목에서 고르게 좋은 성과를 내고 있어요.",
+            "아직 뚜렷한 강점 영역을 찾는 중이에요.",
+            "다양한 과목 경험이 앞으로의 선택 폭을 넓혀줄 거예요.",
+        ],
+    },
+    "none": {
+        "type": "EXPLORING",
+        "label": "탐색형",
+        "description": "아직 성향을 분석할 만큼의 성적 데이터가 충분하지 않아요. "
+                       "다양한 과목을 경험하며 나만의 학습 스타일을 만들어가는 시기예요.",
+        "strategies": [
+            "다양한 평가 방식의 과목을 경험해보기",
+            "과목별 특성(시험·과제·팀플 비중)을 확인하고 선택하기",
+            "한 학기 이상 데이터가 쌓이면 더 구체적인 분석을 받아보기",
+        ],
+        "summary": [
+            "아직 분석할 성적 데이터가 충분하지 않아요.",
+            "다양한 과목을 수강하며 강점을 찾아가는 단계예요.",
+            "다음 학기부터 더 정교한 성향 분석을 받을 수 있어요.",
+        ],
+    },
+}
+
+
 @dataclass
 class LearningProfile:
     has_signal: bool
     indiv_avg: Optional[float]
     collab_avg: Optional[float]
     pattern: str            # 'indiv_strong' | 'collab_strong' | 'balanced' | 'none'
+
+    def persona(self) -> dict:
+        """홈·AI분석 홈·진단결과 3화면이 공유하는 persona 블록. 고정 템플릿 복사본(원본 dict 변경 방지)."""
+        template = _PERSONA_TEMPLATES[self.pattern]
+        return {
+            "type": template["type"],
+            "label": template["label"],
+            "description": template["description"],
+            "strategies": list(template["strategies"]),
+            "summary": list(template["summary"]),
+        }
 
     def summary(self) -> str:
         if self.pattern == "indiv_strong":

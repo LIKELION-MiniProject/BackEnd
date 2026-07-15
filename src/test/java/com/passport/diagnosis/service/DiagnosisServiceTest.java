@@ -13,7 +13,9 @@ import com.passport.diagnosis.dto.DiagnosisResponse;
 import com.passport.profile.domain.Profile;
 import com.passport.profile.service.ProfileService;
 import com.passport.requirement.BigdataAiRequirement;
+import com.passport.requirement.domain.CertMark;
 import com.passport.requirement.domain.EffectiveRequirement;
+import com.passport.requirement.domain.RequirementCertificationTargets;
 import com.passport.requirement.service.RequirementResolutionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,6 +29,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -58,7 +61,9 @@ class DiagnosisServiceTest {
                 .build();
 
         when(profileService.findOwnedProfile(anyLong(), anyLong())).thenReturn(profile);
-        when(requirementResolutionService.resolve(any())).thenReturn(EffectiveRequirement.fromHardcoded(BigdataAiRequirement.REQUIREMENT));
+        // lenient: 아래 5분야 테스트들이 이 기본 스텁을 각자 다른 반환값으로 재정의하므로,
+        // 재정의로 인해 이 스텁이 미사용 처리되어도 strict stubbing 예외가 나지 않게 한다.
+        lenient().when(requirementResolutionService.resolve(any())).thenReturn(EffectiveRequirement.fromHardcoded(BigdataAiRequirement.REQUIREMENT));
     }
 
     @Test
@@ -115,6 +120,79 @@ class DiagnosisServiceTest {
                 .findFirst().orElseThrow();
         assertThat(language.fulfilled()).isFalse();
         assertThat(language.status()).isEqualTo(CertificationStatus.NOT_SUBMITTED);
+    }
+
+    @Test
+    void 인증_5분야_중_대상으로_남은_분야가_있으면_졸업인증_불충족으로_판정한다() {
+        RequirementCertificationTargets targets = RequirementCertificationTargets.builder()
+                .foreignLangCert(CertMark.DONE)
+                .infoProcessing(CertMark.TARGET)
+                .cpr(CertMark.NOT_TARGET)
+                .socialService(CertMark.NOT_TARGET)
+                .foreignLangExtra(CertMark.NOT_TARGET)
+                .build();
+        when(requirementResolutionService.resolve(any())).thenReturn(withCertificationTargets(targets));
+        when(courseRepository.findAllByProfileId(anyLong())).thenReturn(List.of());
+        when(certificationRepository.findAllByProfileId(anyLong())).thenReturn(List.of());
+
+        DiagnosisResponse response = diagnosisService.diagnose(1L, 1L);
+
+        assertThat(response.graduationCertification()).isNotNull();
+        assertThat(response.graduationCertification().fulfilled()).isFalse();
+        assertThat(response.eligibleForGraduation()).isFalse();
+    }
+
+    @Test
+    void 인증_5분야가_모두_완료거나_비대상이면_졸업인증_충족으로_판정하고_졸업가능여부에_반영된다() {
+        var req = BigdataAiRequirement.REQUIREMENT;
+        RequirementCertificationTargets targets = RequirementCertificationTargets.builder()
+                .foreignLangCert(CertMark.DONE)
+                .infoProcessing(CertMark.DONE)
+                .cpr(CertMark.NOT_TARGET)
+                .socialService(CertMark.NOT_TARGET)
+                .foreignLangExtra(CertMark.NOT_TARGET)
+                .build();
+        when(requirementResolutionService.resolve(any())).thenReturn(withCertificationTargets(targets));
+
+        List<Course> courses = List.of(
+                courseOf(req.majorRequiredCredit(), CourseCategory.MAJOR_REQUIRED, Grade.A),
+                courseOf(req.majorElectiveCredit(), CourseCategory.MAJOR_ELECTIVE, Grade.A),
+                courseOf(req.geRequiredCredit(), CourseCategory.GE_REQUIRED, Grade.A),
+                courseOf(req.geElectiveCredit(), CourseCategory.GE_ELECTIVE, Grade.A),
+                courseOf(req.generalElectiveCredit(), CourseCategory.GENERAL_ELECTIVE, Grade.A)
+        );
+        when(courseRepository.findAllByProfileId(anyLong())).thenReturn(courses);
+        when(certificationRepository.findAllByProfileId(anyLong())).thenReturn(List.of(
+                cert(CertificationType.LANGUAGE, CertificationStatus.PASS),
+                cert(CertificationType.VOLUNTEER, CertificationStatus.PASS)
+        ));
+
+        DiagnosisResponse response = diagnosisService.diagnose(1L, 1L);
+
+        assertThat(response.graduationCertification().fulfilled()).isTrue();
+        assertThat(response.eligibleForGraduation()).isTrue();
+    }
+
+    @Test
+    void 유저_요건_미저장시_졸업인증_5분야_판정은_null이고_기존_졸업가능_판정에_영향을_주지_않는다() {
+        // @BeforeEach 기본 스텁 = EffectiveRequirement.fromHardcoded(...) → certificationTargets=null
+        when(courseRepository.findAllByProfileId(anyLong())).thenReturn(List.of());
+        when(certificationRepository.findAllByProfileId(anyLong())).thenReturn(List.of());
+
+        DiagnosisResponse response = diagnosisService.diagnose(1L, 1L);
+
+        assertThat(response.graduationCertification()).isNull();
+    }
+
+    private EffectiveRequirement withCertificationTargets(RequirementCertificationTargets targets) {
+        EffectiveRequirement base = EffectiveRequirement.fromHardcoded(BigdataAiRequirement.REQUIREMENT);
+        return new EffectiveRequirement(
+                base.deptCode(), base.totalCredit(), base.majorRequiredCredit(), base.majorElectiveCredit(),
+                base.majorBasicCredit(), base.geRequiredCredit(), base.geElectiveCredit(), base.generalElectiveCredit(),
+                base.majorTotalCredit(), base.liberalTotalCredit(), base.coreLiberalTargetCount(),
+                base.graduationExam(), base.languageCertRequired(), base.volunteerCertRequired(), base.thesisCertRequired(),
+                base.minGpa(), targets
+        );
     }
 
     private Course courseOf(int credit, CourseCategory category, Grade grade) {

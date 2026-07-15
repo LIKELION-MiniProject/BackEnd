@@ -82,6 +82,7 @@ class Result:
     defaultDirectionId: str
     source: str          # live | cache | fallback
     generatedAt: str     # ISO-8601
+    persona: Optional[dict] = None   # {type,label,description,strategies[3],summary[3]} — additive(계약 v2.1)
 
     @property
     def recommendations(self) -> list[Reco]:
@@ -108,4 +109,5 @@ class Result:
             "defaultDirectionId": self.defaultDirectionId,
             "source": self.source,
             "generatedAt": self.generatedAt,
+            "persona": self.persona,
         }

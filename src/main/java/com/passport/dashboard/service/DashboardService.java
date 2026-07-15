@@ -15,6 +15,7 @@ import com.passport.diagnosis.dto.DiagnosisResponse.CertificationProgress;
 import com.passport.diagnosis.service.DiagnosisService;
 import com.passport.gpa.dto.GpaTrendResponse;
 import com.passport.gpa.service.GpaTrendService;
+import com.passport.persona.service.PersonaService;
 import com.passport.profile.domain.Profile;
 import com.passport.profile.service.ProfileService;
 import com.passport.requirement.domain.EffectiveRequirement;
@@ -44,12 +45,15 @@ public class DashboardService {
     /** "필수 과목" 근사치 계산에 쓰는 카테고리 — ⚠️ 특정 과목 카탈로그가 없어 전필+교필 이수 건수로 근사(아래 requiredCourseView 참고) */
     private static final Set<CourseCategory> REQUIRED_COURSE_CATEGORIES = EnumSet.of(
             CourseCategory.MAJOR_REQUIRED, CourseCategory.GE_REQUIRED);
+    /** 핵심교양은 항상 5영역 고정(요건 입력 화면 §3, CoreLiberalArea @ElementCollection 5행) — 지어낸 값이 아니라 스키마 상수. */
+    private static final int CORE_LIBERAL_AREA_TOTAL = 5;
 
     private final ProfileService profileService;
     private final CourseRepository courseRepository;
     private final DiagnosisService diagnosisService;
     private final GpaTrendService gpaTrendService;
     private final RequirementResolutionService requirementResolutionService;
+    private final PersonaService personaService;
 
     public DashboardResponse getDashboard(Long profileId, Long userId) {
         Profile profile = profileService.findOwnedProfile(profileId, userId);
@@ -81,7 +85,8 @@ public class DashboardService {
                 summary.requestedCredits(),
                 summary.earnedCredits(),
                 summary.gpa(),
-                summary.courses()
+                summary.courses(),
+                personaService.get(profileId).orElse(null)
         );
     }
 
@@ -108,7 +113,10 @@ public class DashboardService {
                 categoryView("totalCredits", "총 이수학점", diagnosis.totalCredit().earned(), requirement.totalCredit(), "학점"),
                 categoryView("major", "전공", majorEarned, requirement.majorTotalCredit(), "학점"),
                 categoryView("liberal", "교양", liberalEarned, requirement.liberalTotalCredit(), "학점"),
-                categoryView("coreLiberal", "핵심 교양", 0, requirement.coreLiberalTargetCount(), "영역"),
+                // ⚠️ 과목↔영역 매핑 데이터가 없어 "완료한 영역"을 직접 계산할 수는 없다.
+                // 대신 유저가 요건 입력 화면(§3)에서 대상으로 표시(target=true)한 영역 수를 current로 보여준다
+                // (완료 여부가 아니라 "적용 대상 영역 수" 근사치 — coreLiberalTargetCount는 유저 저장값 기반, 지어낸 값 아님).
+                categoryView("coreLiberal", "핵심 교양", requirement.coreLiberalTargetCount(), CORE_LIBERAL_AREA_TOTAL, "영역"),
                 requiredCourseView(courses),
                 categoryView("certification", "졸업 인증", certCurrent, certRequired, null),
                 examView(requirement.graduationExam(), diagnosis.certifications())

@@ -29,17 +29,19 @@ def recommend(facts: Facts) -> Result:
     buckets = classify(candidates, facts)                     # 규칙: 5방향 분류(빈 방향 제외)
     default_id = pick_default(buckets)
 
+    persona = profile.persona()   # 규칙 템플릿 — 홈/AI분석/진단결과 3화면 공유(계약 v2.1 additive)
+
     try:
         raw = generate(SYSTEM, build_prompt(facts, buckets, profile.summary()))   # AI 1회
         directions, ai_valid = validate_directions(raw, buckets, profile, facts)
         source = "live" if ai_valid >= MIN_AI_VALID else "fallback"
         result = Result(directions=directions, defaultDirectionId=default_id,
-                        source=source, generatedAt=_now())
+                        source=source, generatedAt=_now(), persona=persona)
     except Exception:
         cached = read_cache(facts.studentKey)
         result = cached or Result(directions=rule_directions(facts, buckets, profile),
                                   defaultDirectionId=default_id,
-                                  source="fallback", generatedAt=_now())
+                                  source="fallback", generatedAt=_now(), persona=persona)
 
     write_cache(facts.studentKey, result)
     return result

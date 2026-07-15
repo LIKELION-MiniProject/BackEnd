@@ -48,7 +48,10 @@ public class ProfileService {
     @Transactional
     public ProfileResponse update(Long profileId, Long userId, ProfileUpdateRequest request) {
         Profile profile = findOwnedProfile(profileId, userId);
-        profile.update(request.deptCode(), request.studentId(), request.admissionYear(), request.name());
+        profile.update(request.deptCode(), request.studentId(), request.admissionYear(), request.name(),
+                request.grade(), request.currentSemester(), request.enrollmentStatus(),
+                request.expectedGraduationYear(), request.doubleMajorType(),
+                request.additionalMajor(), request.advisorProfessor());
         return ProfileResponse.from(profile);
     }
 

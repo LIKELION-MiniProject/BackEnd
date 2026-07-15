@@ -8,9 +8,11 @@ import com.passport.course.repository.CourseRepository;
 import com.passport.diagnosis.dto.DiagnosisResponse;
 import com.passport.diagnosis.dto.DiagnosisResponse.CategoryProgress;
 import com.passport.diagnosis.service.DiagnosisService;
+import com.passport.persona.service.PersonaService;
 import com.passport.profile.domain.Profile;
 import com.passport.profile.service.ProfileService;
 import com.passport.recommendation.dto.DirectionDto;
+import com.passport.recommendation.dto.PersonaDto;
 import com.passport.recommendation.dto.RecoItemDto;
 import com.passport.recommendation.dto.RecommendationResponse;
 import com.passport.requirement.domain.CoreLiberalArea;
@@ -49,6 +51,7 @@ public class RecommendationService {
     private final CourseRepository courseRepository;
     private final CertificationRepository certificationRepository;
     private final UserRequirementRepository userRequirementRepository;
+    private final PersonaService personaService;
 
     @Value("${passport-ai.cache-dir}")
     private String cacheDir;
@@ -56,8 +59,9 @@ public class RecommendationService {
     /** GET /recommendations — 조회 전용. AI를 부르지 않고 마지막 결과(캐시)를 서빙한다. */
     public RecommendationResponse getRecommendations(Long profileId, Long userId) {
         Profile profile = profileService.findOwnedProfile(profileId, userId);
-        return readCache(profile.getStudentId())
+        RecommendationResponse response = readCache(profile.getStudentId())
                 .orElseGet(() -> ruleFallback(profileId, userId));
+        return withFreshPersona(response, profileId);
     }
 
     /**
@@ -79,10 +83,10 @@ public class RecommendationService {
             // 지문 도입 이전에 만들어진 캐시(예: 사전 생성 데모) — 캐시 유지 + 지문만 기록.
             // 이후 데이터가 실제로 바뀌면 그때부터 라이브 재생성이 동작한다.
             writeFingerprint(studentId, currentFp);
-            return cached.get();
+            return withFreshPersona(cached.get(), profileId);
         }
         if (cached.isPresent() && currentFp.equals(storedFp.get())) {
-            return cached.get();   // 데이터 변화 없음 → 같은 결과 유지
+            return withFreshPersona(cached.get(), profileId);   // 데이터 변화 없음 → 같은 결과 유지
         }
 
         // 데이터 변경(또는 첫 생성) → 라이브 재생성. bridge.py가 결과를 cache/{studentId}.json에 저장한다.
@@ -92,11 +96,25 @@ public class RecommendationService {
             if ("live".equals(fresh.get().source())) {
                 writeFingerprint(studentId, currentFp);
             }
-            return fresh.get();
+            return withFreshPersona(fresh.get(), profileId);
         }
 
         log.warn("passport-ai 라이브 재생성 실패 — 기존 캐시/규칙 폴백으로 응답 (profileId={})", profileId);
-        return cached.orElseGet(() -> ruleFallback(profileId, userId));
+        return withFreshPersona(cached.orElseGet(() -> ruleFallback(profileId, userId)), profileId);
+    }
+
+    /**
+     * persona는 수강 이력이 바뀔 때마다 CourseService→PersonaService가 이미 재계산해 DB에 저장해둔 값이 최신이다.
+     * passport-ai 캐시/폴백 응답에 담긴 persona(생성 시점 스냅샷)보다 이 DB 값을 우선해, "AI 분석하기"를 누르지
+     * 않고 성적만 새로 입력해도 홈·AI분석 화면의 persona가 항상 최신 성적을 반영하도록 한다(원석 요청).
+     */
+    private RecommendationResponse withFreshPersona(RecommendationResponse response, Long profileId) {
+        PersonaDto fresh = personaService.get(profileId).orElse(response.persona());
+        if (fresh == response.persona()) {
+            return response;
+        }
+        return new RecommendationResponse(response.directions(), response.recommendations(),
+                response.defaultDirectionId(), response.source(), response.generatedAt(), fresh);
     }
 
     // ── passport-ai payload ──────────────────────────────────────────────
@@ -265,9 +283,10 @@ public class RecommendationService {
                 "부족한 졸업 요건부터 확실하게 채우는 전략이에요.",
                 null, true, items);
 
+        // persona: 규칙 폴백은 passport-ai의 성향 분석(과목 특성 데이터)을 거치지 않아 생성 근거가 없다 — null(FE 미표시).
         return new RecommendationResponse(
                 List.of(direction), items, "FAST_GRAD", "fallback",
-                Instant.now().toString());
+                Instant.now().toString(), null);
     }
 
     private RecoItemDto toShortfallItem(CategoryProgress category) {

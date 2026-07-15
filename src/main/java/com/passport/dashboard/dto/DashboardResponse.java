@@ -3,6 +3,7 @@ package com.passport.dashboard.dto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.passport.diagnosis.dto.DiagnosisResponse;
 import com.passport.gpa.dto.GpaTrendResponse;
+import com.passport.recommendation.dto.PersonaDto;
 
 import java.util.List;
 
@@ -29,7 +30,13 @@ public record DashboardResponse(
         /** 최신 학기 GPA. 기존 최상위 gpa(GpaProgress 객체)와 이름이 겹쳐 semesterGpa로 명명 — ⚠️ FE 확인 필요 */
         Double semesterGpa,
         /** 최신 학기 수강목록 */
-        List<CourseLine> courses
+        List<CourseLine> courses,
+
+        /**
+         * additive(원석 요청): 학습 성향 persona 블록. 수강 이력이 바뀔 때마다 PersonaService가 재계산해
+         * 저장해둔 값을 그대로 서빙(이 화면에서 재계산하지 않음). 수강 이력이 하나도 없으면 null.
+         */
+        PersonaDto persona
 ) {
 
     public record CategoryView(
