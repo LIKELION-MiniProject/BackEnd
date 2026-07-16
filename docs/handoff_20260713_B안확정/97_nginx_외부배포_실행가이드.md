@@ -7,14 +7,35 @@
 
 ---
 
+## 🟢 진행 상황 (2026-07-16)
+
+**B단계 중 nginx 설치·설정·프록시 검증은 Claude가 이미 완료했다.** (EC2에 nginx 1.24.0 설치, `passport.conf` 배치, `nginx -t` 통과, 내부 검증 `FE 200 / API 401`.) 정적 루트 `/var/www/passport`엔 **임시 안내 페이지**가 들어 있다. **남은 것은 아래 2개뿐**:
+
+1. **인서 `dist` 배치** — 임시 페이지를 실제 앱으로 교체 (아래 B-2' 참조)
+2. **보안그룹 80 개방** — 콘솔 작업 (C단계)
+
+---
+
 ## 담당 분담
 
-| 단계 | 담당 | 내용 |
-|---|---|---|
-| A | **인서** | FE를 `VITE_API_BASE_URL=/api/v1`(상대경로)로 빌드 → `dist/` 전달 |
-| B | **원석** | `dist` 업로드 → nginx 설치·설정 → 재시작 |
-| C | **원석** | AWS 보안그룹 인바운드 **80 = `0.0.0.0/0`** 추가 |
-| D | **전원** | `http://15.164.84.176/` 접속 확인 |
+| 단계 | 담당 | 내용 | 상태 |
+|---|---|---|---|
+| A | **인서** | FE를 `VITE_API_BASE_URL=/api/v1`(상대경로)로 빌드 → `dist/` 전달 | 🔴 |
+| B | ~~원석~~ Claude | nginx 설치·설정·검증 | ✅ 완료 |
+| B-2' | **원석/Claude** | `dist` 업로드 → `/var/www/passport` 교체 | 🔴 dist 대기 |
+| C | **원석** | AWS 보안그룹 인바운드 **80 = `0.0.0.0/0`** 추가 | 🔴 |
+| D | **전원** | `http://15.164.84.176/` 접속 확인 | ⏳ |
+
+### B-2'. dist 교체 (dist 확보 후)
+
+```bash
+# EC2에서 (dist를 ~/web-dist 로 업로드한 뒤)
+sudo rm -rf /var/www/passport/* \
+  && sudo cp -r ~/web-dist/* /var/www/passport/ \
+  && sudo chown -R www-data:www-data /var/www/passport
+# 확인
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost/
+```
 
 ---
 
