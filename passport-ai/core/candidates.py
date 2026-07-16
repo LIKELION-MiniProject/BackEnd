@@ -7,7 +7,9 @@
 from .models import Facts, Course
 from .loader import load_courses
 
-MAX_CANDIDATES = 20
+# 20이면 부족요건에 맞는 과목(원석 사례 25개)이 잘려서 GRADE_SAFE 후보가 1개만 남는다.
+# 25면 잘림 없이 전부 들어가고 GRADE_SAFE가 3개가 된다. 그 이상 올려도 후보 자체가 25개라 변화 없음.
+MAX_CANDIDATES = 25
 
 # 부족학점 구분(shortCredits 키) → 과목 detailCategory 매칭
 MAJOR_ELECTIVE_TAGS = {"MAJOR_ELECTIVE"}
