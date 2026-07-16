@@ -45,8 +45,10 @@ public class DashboardService {
     /** "필수 과목" 근사치 계산에 쓰는 카테고리 — ⚠️ 특정 과목 카탈로그가 없어 전필+교필 이수 건수로 근사(아래 requiredCourseView 참고) */
     private static final Set<CourseCategory> REQUIRED_COURSE_CATEGORIES = EnumSet.of(
             CourseCategory.MAJOR_REQUIRED, CourseCategory.GE_REQUIRED);
-    /** 핵심교양은 항상 5영역 고정(요건 입력 화면 §3, CoreLiberalArea @ElementCollection 5행) — 지어낸 값이 아니라 스키마 상수. */
-    private static final int CORE_LIBERAL_AREA_TOTAL = 5;
+    private static final String STATUS_DONE = "완료";
+    private static final String STATUS_IN_PROGRESS = "진행중";
+    /** 판정 근거 데이터가 없어 충족/미충족을 계산할 수 없는 항목. FE는 막대·퍼센트를 그리지 않는다. */
+    private static final String STATUS_UNKNOWN = "미입력";
 
     private final ProfileService profileService;
     private final CourseRepository courseRepository;
@@ -90,19 +92,19 @@ public class DashboardService {
         );
     }
 
-    private int overallProgress(int earned, int required) {
+    private int overallProgress(double earned, int required) {
         if (required <= 0) {
             return 0;
         }
-        return Math.min(100, Math.round(earned * 100f / required));
+        return Math.min(100, Math.round((float) (earned * 100.0 / required)));
     }
 
     private List<CategoryView> buildCategories(DiagnosisResponse diagnosis, EffectiveRequirement requirement, List<Course> courses) {
         Map<CourseCategory, CategoryProgress> byCategory = diagnosis.categories().stream()
                 .collect(Collectors.toMap(CategoryProgress::category, c -> c));
 
-        int majorEarned = sumEarned(byCategory, MAJOR_CATEGORIES);
-        int liberalEarned = sumEarned(byCategory, LIBERAL_CATEGORIES);
+        double majorEarned = sumEarned(byCategory, MAJOR_CATEGORIES);
+        double liberalEarned = sumEarned(byCategory, LIBERAL_CATEGORIES);
 
         int certRequired = (int) diagnosis.certifications().stream().filter(CertificationProgress::required).count();
         int certCurrent = (int) diagnosis.certifications().stream()
@@ -113,21 +115,18 @@ public class DashboardService {
                 categoryView("totalCredits", "총 이수학점", diagnosis.totalCredit().earned(), requirement.totalCredit(), "학점"),
                 categoryView("major", "전공", majorEarned, requirement.majorTotalCredit(), "학점"),
                 categoryView("liberal", "교양", liberalEarned, requirement.liberalTotalCredit(), "학점"),
-                // ⚠️ 과목↔영역 매핑 데이터가 없어 "완료한 영역"을 직접 계산할 수는 없다.
-                // 대신 유저가 요건 입력 화면(§3)에서 대상으로 표시(target=true)한 영역 수를 current로 보여준다
-                // (완료 여부가 아니라 "적용 대상 영역 수" 근사치 — coreLiberalTargetCount는 유저 저장값 기반, 지어낸 값 아님).
-                categoryView("coreLiberal", "핵심 교양", requirement.coreLiberalTargetCount(), CORE_LIBERAL_AREA_TOTAL, "영역"),
+                coreLiberalView(),
                 requiredCourseView(courses),
                 categoryView("certification", "졸업 인증", certCurrent, certRequired, null),
                 examView(requirement.graduationExam(), diagnosis.certifications())
         );
     }
 
-    private int sumEarned(Map<CourseCategory, CategoryProgress> byCategory, Set<CourseCategory> targets) {
+    private double sumEarned(Map<CourseCategory, CategoryProgress> byCategory, Set<CourseCategory> targets) {
         return targets.stream()
                 .map(byCategory::get)
                 .filter(Objects::nonNull)
-                .mapToInt(CategoryProgress::earnedCredit)
+                .mapToDouble(CategoryProgress::earnedCredit)
                 .sum();
     }
 
@@ -140,26 +139,34 @@ public class DashboardService {
                 .filter(c -> REQUIRED_COURSE_CATEGORIES.contains(c.getCategory()))
                 .filter(c -> c.getGrade().isCreditEarned())
                 .count();
-        return new CategoryView("requiredCourse", "필수 과목", current, null, "건", "진행중");
+        return new CategoryView("requiredCourse", "필수 과목", (double) current, null, "건", STATUS_IN_PROGRESS);
     }
 
-    /** ⚠️ graduationExam=EXAM(졸업시험)은 합격 여부를 추적하는 데이터가 없어 항상 "진행중"으로 둔다. */
+    /**
+     * 졸업시험/논문은 THESIS·EITHER일 때만 인증 데이터로 판정할 수 있다.
+     * EXAM(졸업시험 합격 여부)은 추적 데이터가 없고, NONE·null은 요건 자체가 미확정이라 판정 근거가 없다
+     * — 근거 없이 "완료"로 내리면 미충족을 충족으로 오표시하므로 STATUS_UNKNOWN으로 둔다.
+     */
     private CategoryView examView(GraduationExamType examType, List<CertificationProgress> certifications) {
-        String status;
-        if (examType == null || examType == GraduationExamType.NONE) {
-            status = "완료";
-        } else if (examType == GraduationExamType.THESIS || examType == GraduationExamType.EITHER) {
-            boolean thesisPassed = certifications.stream()
-                    .anyMatch(c -> c.type() == CertificationType.THESIS && c.status() == CertificationStatus.PASS);
-            status = thesisPassed ? "완료" : "진행중";
-        } else {
-            status = "진행중";
+        if (examType != GraduationExamType.THESIS && examType != GraduationExamType.EITHER) {
+            return new CategoryView("exam", "졸업시험/논문", null, null, null, STATUS_UNKNOWN);
         }
-        return new CategoryView("exam", "졸업시험/논문", null, null, null, status);
+        boolean thesisPassed = certifications.stream()
+                .anyMatch(c -> c.type() == CertificationType.THESIS && c.status() == CertificationStatus.PASS);
+        return new CategoryView("exam", "졸업시험/논문", null, null, null, thesisPassed ? STATUS_DONE : STATUS_IN_PROGRESS);
     }
 
-    private CategoryView categoryView(String key, String name, int current, int required, String unit) {
-        String status = current >= required ? "완료" : "진행중";
+    /**
+     * 핵심교양은 과목↔영역 매핑 데이터가 없어 "이수한 영역 수"를 계산할 수 없다.
+     * 유저 저장값의 target 수는 "적용 대상 영역"이지 이수 실적이 아니므로 진척도로 내보내면
+     * 5영역 전부 대상 표시 시 5/5 "완료"로 오표시된다. 판정 불가를 그대로 알린다.
+     */
+    private CategoryView coreLiberalView() {
+        return new CategoryView("coreLiberal", "핵심 교양", null, null, null, STATUS_UNKNOWN);
+    }
+
+    private CategoryView categoryView(String key, String name, double current, int required, String unit) {
+        String status = current >= required ? STATUS_DONE : STATUS_IN_PROGRESS;
         return new CategoryView(key, name, current, required, unit, status);
     }
 
@@ -176,10 +183,10 @@ public class DashboardService {
                 .filter(c -> c.getYear() == latest.getYear() && c.getSemester() == latest.getSemester())
                 .toList();
 
-        int requested = semesterCourses.stream().mapToInt(Course::getCredit).sum();
-        int earned = semesterCourses.stream()
+        double requested = semesterCourses.stream().mapToDouble(Course::getCredit).sum();
+        double earned = semesterCourses.stream()
                 .filter(c -> c.getGrade().isCreditEarned())
-                .mapToInt(Course::getCredit)
+                .mapToDouble(Course::getCredit)
                 .sum();
         Double gpa = GpaCalculator.calculate(semesterCourses);
 
@@ -191,6 +198,6 @@ public class DashboardService {
         return new SemesterSummary(semesterLabel, requested, earned, gpa, lines);
     }
 
-    private record SemesterSummary(String semester, int requestedCredits, int earnedCredits, Double gpa, List<CourseLine> courses) {
+    private record SemesterSummary(String semester, double requestedCredits, double earnedCredits, Double gpa, List<CourseLine> courses) {
     }
 }

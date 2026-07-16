@@ -18,15 +18,16 @@ public record DiagnosisResponse(
         GraduationCertificationProgress graduationCertification
 ) {
 
-    public record CreditProgress(int earned, int required, int shortfall) {
-        public static CreditProgress of(int earned, int required) {
-            return new CreditProgress(earned, required, Math.max(0, required - earned));
+    /** earned·shortfall은 0.5학점 과목(예: 인성과미래설계Ⅰ) 때문에 소수. required는 요건 기준값이라 정수. */
+    public record CreditProgress(double earned, int required, double shortfall) {
+        public static CreditProgress of(double earned, int required) {
+            return new CreditProgress(earned, required, Math.max(0.0, required - earned));
         }
     }
 
-    public record CategoryProgress(CourseCategory category, int earnedCredit, int requiredCredit, int shortfall) {
-        public static CategoryProgress of(CourseCategory category, int earned, int required) {
-            return new CategoryProgress(category, earned, required, Math.max(0, required - earned));
+    public record CategoryProgress(CourseCategory category, double earnedCredit, int requiredCredit, double shortfall) {
+        public static CategoryProgress of(CourseCategory category, double earned, int required) {
+            return new CategoryProgress(category, earned, required, Math.max(0.0, required - earned));
         }
     }
 

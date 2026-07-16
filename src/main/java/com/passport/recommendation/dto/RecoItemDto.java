@@ -6,7 +6,7 @@ import java.util.List;
 public record RecoItemDto(
         String courseCode,
         String courseName,
-        int credit,
+        double credit,
         String category,
         List<String> reasons
 ) {

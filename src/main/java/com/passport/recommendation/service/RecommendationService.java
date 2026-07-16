@@ -126,7 +126,7 @@ public class RecommendationService {
     private Map<String, Object> buildPayload(Profile profile, Long profileId, Long userId) {
         DiagnosisResponse diagnosis = diagnosisService.diagnose(profileId, userId);
 
-        Map<String, Integer> shortCredits = new LinkedHashMap<>();
+        Map<String, Double> shortCredits = new LinkedHashMap<>();
         diagnosis.categories().stream()
                 .filter(c -> c.shortfall() > 0)
                 .forEach(c -> shortCredits.put(c.category().name(), c.shortfall()));
@@ -273,7 +273,7 @@ public class RecommendationService {
 
         List<RecoItemDto> items = diagnosis.categories().stream()
                 .filter(c -> c.shortfall() > 0)
-                .sorted(Comparator.comparingInt(CategoryProgress::shortfall).reversed())
+                .sorted(Comparator.comparingDouble(CategoryProgress::shortfall).reversed())
                 .limit(5)
                 .map(this::toShortfallItem)
                 .toList();
@@ -289,11 +289,16 @@ public class RecommendationService {
                 Instant.now().toString(), null);
     }
 
+    /** 학점은 0.5 단위라 double이지만 화면 문구에 "12.0학점"으로 나가면 안 된다. 정수면 소수점을 떼고, 아니면 12.5로 남긴다. */
+    private static String formatCredit(double credit) {
+        return credit == Math.rint(credit) ? String.valueOf((long) credit) : String.valueOf(credit);
+    }
+
     private RecoItemDto toShortfallItem(CategoryProgress category) {
         String label = categoryLabel(category.category());
         return new RecoItemDto(
                 null,
-                label + " " + category.shortfall() + "학점 이수 필요",
+                label + " " + formatCredit(category.shortfall()) + "학점 이수 필요",
                 category.shortfall(),
                 label,
                 List.of(

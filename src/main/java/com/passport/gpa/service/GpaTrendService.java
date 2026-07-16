@@ -57,9 +57,9 @@ public class GpaTrendService {
     }
 
     private SemesterGpa toSemesterGpa(SemesterKey key, List<Course> semesterCourses) {
-        int earnedCredit = semesterCourses.stream()
+        double earnedCredit = semesterCourses.stream()
                 .filter(course -> course.getGrade().isCreditEarned())
-                .mapToInt(Course::getCredit)
+                .mapToDouble(Course::getCredit)
                 .sum();
 
         return new SemesterGpa(key.year(), key.semester(), GpaCalculator.calculate(semesterCourses), earnedCredit, false);

@@ -4,7 +4,7 @@ import com.passport.course.domain.Course;
 
 public record CourseUpdateRequest(
         String name,
-        int credit,
+        double credit,
         Course.CourseCategory category,
         Course.Grade grade,
         int year,

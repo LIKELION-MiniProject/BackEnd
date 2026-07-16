@@ -16,7 +16,7 @@ public final class GpaCalculator {
 
     /** GPA 대상 과목이 하나도 없으면 null (0으로 나누는 것을 방지) */
     public static Double calculate(List<Course> courses) {
-        int gpaCredit = 0;
+        double gpaCredit = 0.0;
         double weightedSum = 0.0;
 
         for (Course course : courses) {
@@ -28,6 +28,6 @@ public final class GpaCalculator {
             weightedSum += course.getCredit() * grade.getGpaValue();
         }
 
-        return gpaCredit == 0 ? null : weightedSum / gpaCredit;
+        return gpaCredit == 0.0 ? null : weightedSum / gpaCredit;
     }
 }

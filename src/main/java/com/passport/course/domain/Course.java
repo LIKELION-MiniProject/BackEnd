@@ -27,7 +27,7 @@ public class Course {
     private String name;
 
     @Column(nullable = false)
-    private int credit;
+    private double credit;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -48,7 +48,7 @@ public class Course {
     private boolean retake;
 
     @Builder
-    public Course(Profile profile, String name, int credit, CourseCategory category, Grade grade, int year, int semester, boolean retake) {
+    public Course(Profile profile, String name, double credit, CourseCategory category, Grade grade, int year, int semester, boolean retake) {
         this.profile = profile;
         this.name = name;
         this.credit = credit;
@@ -59,7 +59,7 @@ public class Course {
         this.retake = retake;
     }
 
-    public void update(String name, int credit, CourseCategory category, Grade grade, int year, int semester, boolean retake) {
+    public void update(String name, double credit, CourseCategory category, Grade grade, int year, int semester, boolean retake) {
         this.name = name;
         this.credit = credit;
         this.category = category;

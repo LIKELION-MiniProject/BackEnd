@@ -5,7 +5,7 @@ import com.passport.course.domain.Course;
 public record CourseResponse(
         Long id,
         String name,
-        int credit,
+        double credit,
         Course.CourseCategory category,
         Course.Grade grade,
         int year,

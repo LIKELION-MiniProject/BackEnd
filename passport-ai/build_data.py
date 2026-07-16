@@ -47,7 +47,13 @@ def cell(row, i):
     return v or None  # 빈칸 → null (미상)
 
 
-def load_eval_by_code():
+def load_eval_by_key():
+    """
+    키는 (교과목명, 교과목코드) 쌍이다. 코드 단독으로는 서로 다른 과목이 같은 코드를 쓰는 경우
+    (정밀의료/BM프로젝트=400990, K-콘텐츠새로읽기/대인관계론=401441, 웰니스문화의이해/광고와문화=400778)
+    뒤 행이 앞 행을 덮어써서 엉뚱한 평가특성이 붙는다. 반대로 이름 단독으로는
+    실용영어청취및말하기(400301/114511)가 겹친다. 쌍으로 하면 182과목 전부 1:1로 맞는다.
+    """
     path = RAW / "courses_eval.csv"
     out = {}
     with open(path, encoding="utf-8-sig") as f:
@@ -55,8 +61,11 @@ def load_eval_by_code():
     for row in rows[1:]:
         if len(row) < 6 or not row[4].strip():
             continue
-        code = row[4].strip()
-        out[code] = {
+        key = (row[3].strip(), row[4].strip())
+        if key in out:
+            print(f"  ⚠️ 중복 키 무시: {key}")
+            continue
+        out[key] = {
             "evaluation": {k: cell(row, i) for k, i in EVAL_COLS.items()},
             "gradingStyle": cell(row, 13),   # ⑧성적후함정도 (보통/너그러움)
             "examType": cell(row, 16),       # 시험유형_횟수
@@ -80,14 +89,15 @@ def area_of(detail_category):
 
 def main():
     areas = json.load(open(RAW / "courses_areas.json", encoding="utf-8"))
-    evals = load_eval_by_code()
+    evals = load_eval_by_key()
 
     merged, matched = [], 0
     for c in areas:
         code = str(c.get("courseCode", "")).strip()
+        name = str(c.get("courseName", "")).strip()
         detail = c.get("detailCategory")
         area_no, area_code = area_of(detail)
-        ev = evals.get(code)
+        ev = evals.get((name, code))
         if ev:
             matched += 1
         merged.append({

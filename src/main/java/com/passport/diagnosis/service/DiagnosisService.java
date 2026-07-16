@@ -84,21 +84,21 @@ public class DiagnosisService {
     }
 
     private CreditProgress calculateTotalCredit(List<Course> courses, EffectiveRequirement requirement) {
-        int earned = courses.stream()
+        double earned = courses.stream()
                 .filter(course -> course.getGrade().isCreditEarned())
-                .mapToInt(Course::getCredit)
+                .mapToDouble(Course::getCredit)
                 .sum();
         return CreditProgress.of(earned, requirement.totalCredit());
     }
 
     private List<CategoryProgress> calculateCategoryProgress(List<Course> courses, EffectiveRequirement requirement) {
-        Map<CourseCategory, Integer> earnedByCategory = new EnumMap<>(CourseCategory.class);
+        Map<CourseCategory, Double> earnedByCategory = new EnumMap<>(CourseCategory.class);
         for (CourseCategory category : CourseCategory.values()) {
-            earnedByCategory.put(category, 0);
+            earnedByCategory.put(category, 0.0);
         }
         for (Course course : courses) {
             if (course.getGrade().isCreditEarned()) {
-                earnedByCategory.merge(course.getCategory(), course.getCredit(), Integer::sum);
+                earnedByCategory.merge(course.getCategory(), course.getCredit(), Double::sum);
             }
         }
 
