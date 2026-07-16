@@ -35,16 +35,18 @@ npm install && npm run dev   # VITE_API_BASE_URL 을 백엔드 주소로 설정
 
 ## 배포 (운영 환경)
 
-발표·시연은 AWS EC2에 상시 가동된 서버로 진행합니다.
+발표·시연은 AWS EC2에 상시 가동된 서버로 진행하며, 외부 사용자 누구나 접속할 수 있도록 nginx 리버스 프록시로 공개합니다.
 
 | 항목 | 값 |
 |---|---|
 | 서버 | AWS EC2 (Ubuntu 24.04, `ap-northeast-2`), systemd `passport.service` 상시 가동 |
-| 현재 접속 주소 | `http://15.164.84.176:8080` (탄력적 IP, 고정) |
-| 외부 공개(예정) | nginx 리버스 프록시로 `:80` 프론트 → `/` 정적(FE `dist`), `/api` → `localhost:8080` |
-| 구성요소 | ① Spring Boot(JAR) ② H2 파일 DB ③ `passport-ai`(Python) — 추천/persona 산출 및 캐시 |
+| 공개 접속 주소 | `http://15.164.84.176/` (nginx, 포트 80) — 외부 사용자용 |
+| API 직접 주소 | `http://15.164.84.176:8080/api/v1` (백엔드 단독, 디버깅용) |
+| 구성요소 | ① nginx(리버스 프록시) ② Spring Boot(JAR, `:8080`) ③ H2 파일 DB ④ `passport-ai`(Python) — 추천/persona 산출 및 캐시 |
 
-`passport-ai`는 Spring이 필요 시 호출하는 파이썬 컴포넌트로, 규칙 기반 후보 선별 위에 Gemini 추천을 얹고 결과를 `passport-ai/cache`에 캐싱합니다.
+**공개 구조** : 브라우저가 `:80`으로 접속하면 nginx가 경로로 나눕니다 — `/api/…`는 Spring(`:8080`)으로 프록시하고, 그 외는 FE 정적파일(`dist`)을 서빙합니다. FE와 API가 **같은 출처**라 CORS·mixed-content가 발생하지 않습니다. nginx는 앞단 프록시일 뿐 백엔드 코드는 건드리지 않습니다. 설정·배포 절차는 [`deploy/nginx/passport.conf`](deploy/nginx/passport.conf)와 `docs/handoff_20260713_B안확정/97_nginx_외부배포_실행가이드.md`를 참조합니다.
+
+`passport-ai`는 Spring이 필요 시 호출하는 파이썬 컴포넌트로, 규칙 기반 후보 선별 위에 Gemini 추천을 얹고 결과를 `passport-ai/cache`에 캐싱합니다. AI는 조회(GET)마다가 아니라 "AI 분석"(POST) 시점에 별도 프로세스로 실행되며, 실패 시 캐시로 폴백합니다(안정성 상세는 `docs/handoff_20260713_B안확정/96_AI_서버_안정성_리포트.md`).
 
 ## 핵심 원칙
 
