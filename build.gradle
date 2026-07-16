@@ -31,6 +31,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
     runtimeOnly 'com.h2database:h2'
+    // 로컬 MySQL 전환 검증용(feat/mysql 브랜치). H2와 공존하며 실행 프로파일(mysql)로 선택.
+    // 버전은 Spring Boot 의존성 관리가 지정.
+    runtimeOnly 'com.mysql:mysql-connector-j'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
